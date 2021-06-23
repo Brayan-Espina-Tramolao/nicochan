@@ -1,39 +1,40 @@
 <template>
     <div>
-        <div class="row formulario">
-
-                          <router-link to="/registro" v-if="!existeUsuario" class="text-decoration-none" id="nav">Crear</router-link> 
-
-                 <router-link to="/acceso" v-if="!existeUsuario" class="text-decoration-none" id="nav">Ingresar</router-link>
-            <div class="col-12 pt-3">
-                <h1>Bienvenido de vuelta!</h1>
-            </div>
-            <div class="col-12 text-center">
-                <form @submit.prevent="ingresoUsuario({email: email, password: pass})" class="form__ ">
-                    <div class="form__focus">
-                        <input 
-                        type="email"
-                        placeholder=" "
-                        v-model="email"
-                        class="form-control form__input"
-                        required>
-                        <label for="" class="form__label">Ingrese contraseña</label>
-                     </div>
-                    <div class="form__focus">
-                        <input 
-                        type="text"
-                        v-model="pass"
-                        placeholder=" "
-                        class="form-control form__input"
-                        required>
-                        <label for="" class="form__label">Ingrese contraseña</label>
+        <div class="container-fluid d-flex justify-content-center align-items-center">
+                <div class="row formulario text-center">
+                    <div class="col-12 pt-3">
+                        <h1>Bienvenido de vuelta!</h1>
                     </div>
-
-                    <button type="submit" class="btn btn-outline-success mt-2 rounded-pill">Acceder</button>
-                </form>
+                    <div class="col-12 text-center">
+                        <form @submit.prevent="ingresoUsuario({email: email, password: pass})" class="form__ ">
+                            <div class="form__focus">
+                                <input 
+                                type="email"
+                                placeholder=" "
+                                v-model="email"
+                                class="form-control form__input"
+                                required>
+                                <label for="" class="form__label">Ingrese contraseña</label>
+                            </div>
+                            <div class="form__focus">
+                                <input 
+                                type="text"
+                                v-model="pass"
+                                placeholder=" "
+                                class="form-control form__input"
+                                required>
+                                <label for="" class="form__label">Ingrese contraseña</label>
+                            </div>
+                            <button type="submit" class="btn btn-outline-success mt-2 rounded-pill">Acceder</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <router-link to="/registro" v-if="!existeUsuario" class="text-decoration-none" id="nav">Crear</router-link> 
+                    <router-link to="/acceso" v-if="!existeUsuario" class="text-decoration-none" id="nav">Ingresar</router-link>
+                </div>
+                <p>{{error}}</p>
             </div>
-        </div>
-        <p>{{error}}</p>
     </div>
 </template>
 

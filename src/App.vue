@@ -24,23 +24,9 @@
   color: #2c3e50;
 }
 
-.pestaña.router-link-exact-active{
-  border-style: solid;
-  border-color: #42b983;
-  border-width: 1px;
-  border-bottom: 0;
-  border-radius: 3px;
- 
-}
 
 #nav.router-link-exact-active {
   color: #42b983;
-  padding: 1rem 2rem;
-  border-style: solid;
-  border-color: #42b983;
-  border-width: 1px;
-  border-bottom: 0;
-  border-radius: 3px;
-  
+  padding: 1rem 2rem;  
 }
 </style>
